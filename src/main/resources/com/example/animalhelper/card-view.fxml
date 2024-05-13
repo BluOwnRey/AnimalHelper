@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #B0D8D0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demoproject.MainController">
+    <ScrollPane fitToWidth="true" layoutY="52.0" prefHeight="655.0" prefWidth="400.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="52.0" xmlns:fx="http://javafx.com/fxml">
+      <content>
+         <AnchorPane prefHeight="187.0" prefWidth="400.0">
+            <children>
+               <AnchorPane layoutX="25.0" layoutY="12.8" prefHeight="175.0" prefWidth="380.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 50;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="13.0">
+                  <children>
+                     <AnchorPane layoutX="22.0" layoutY="16.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutY="5.0" text="кличка" AnchorPane.leftAnchor="0.0">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="Кличка" style="-fx-background-radius: 50;">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="22.0" layoutY="51.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutX="-0.19999999999999996" layoutY="5.0" text="вид" AnchorPane.leftAnchor="-0.19999999999999996">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <ComboBox layoutX="59.0" layoutY="5.0" prefHeight="26.0" prefWidth="100.0" promptText="Вид" style="-fx-background-radius: 50;" />
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="22.0" layoutY="86.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutX="-0.19999999999999996" layoutY="5.0" text="порода" AnchorPane.leftAnchor="-0.19999999999999996">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="порода" style="-fx-background-radius: 50;">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="22.0" layoutY="121.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutX="-0.19999999999999996" layoutY="5.0" text="пол" AnchorPane.leftAnchor="-0.19999999999999996">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <ChoiceBox layoutX="60.0" layoutY="4.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 50;" />
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="189.0" layoutY="16.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutY="5.0" text="вес" AnchorPane.leftAnchor="0.0">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="вес" style="-fx-background-radius: 50;">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="189.0" layoutY="51.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutY="5.0" prefHeight="26.0" prefWidth="55.0" text="кастрация" AnchorPane.leftAnchor="0.0">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <ChoiceBox layoutX="60.0" layoutY="5.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-radius: 50;" />
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="189.0" layoutY="86.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutY="5.0" prefHeight="26.0" prefWidth="61.0" text="Дата Рожд" AnchorPane.leftAnchor="0.0">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <DatePicker layoutX="61.0" layoutY="5.0" prefHeight="26.0" prefWidth="96.0" />
+                        </children>
+                     </AnchorPane>
+                     <AnchorPane layoutX="189.0" layoutY="121.0" prefHeight="35.0" prefWidth="160.0">
+                        <children>
+                           <Label layoutX="-0.19999999999999996" layoutY="5.0" text="возраст" AnchorPane.leftAnchor="-0.19999999999999996">
+                              <font>
+                                 <Font size="16.0" />
+                              </font>
+                           </Label>
+                           <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="возраст" style="-fx-background-radius: 50;">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </AnchorPane>
+                  </children>
+               </AnchorPane>
+            </children>
+         </AnchorPane>
+      </content>
+    </ScrollPane>
+    <Button id="btnMenu" fx:id="btnMenu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 50; -fx-background-color: #F4F8D391;" text="☷" textAlignment="CENTER" textFill="#1a762e" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Button>
+    <Label layoutX="75.0" layoutY="16.0" prefHeight="24.0" prefWidth="178.0" text="Карта пациента" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="547.0" AnchorPane.topAnchor="16.0">
+        <font>
+            <Font name="Georgia Bold" size="20.0" />
+        </font>
+    </Label>
+   <Label layoutX="263.0" layoutY="16.0" prefHeight="24.0" prefWidth="178.0" text="Кличка">
+      <font>
+         <Font name="Georgia Bold" size="20.0" />
+      </font>
+   </Label>
+   <Label layoutX="250.0" layoutY="7.0" prefHeight="35.0" prefWidth="5.0" text="|" textFill="#0952356b">
+      <font>
+         <Font name="Georgia Bold" size="24.0" />
+      </font>
+   </Label>
+   <ScrollPane fitToWidth="true" layoutX="400.0" layoutY="52.0" prefHeight="655.0" prefWidth="400.0" />
+</AnchorPane>
