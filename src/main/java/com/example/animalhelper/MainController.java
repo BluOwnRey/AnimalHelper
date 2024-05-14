@@ -1,11 +1,14 @@
 package com.example.animalhelper;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Arrays;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
@@ -13,7 +16,9 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MainController {
+    @FXML
     public Button btnMenu;
+    @FXML
     public Button btnEdit;
     @FXML
     private VBox VBoxDataPerson;
@@ -57,14 +62,40 @@ public class MainController {
     }
 
     @FXML
-    void initialize() {
+    void initialize() throws SQLException {
         menu.setVisible(false);
         menu_bac.setVisible(false);
-//        DB.createTables();
+
+//        DB.clearTables();
+        DB.createTables();
+
         // Список элементов сортировки
         spinnerSort.getItems().addAll("Сначала старые", "Сначала новые");
         // Предустановленный элемент
         spinnerSort.setValue("Сначала старые");
+
+
+        String[][] matrix = DB.getAllRegistryData();
+
+
+        for (String[] row : matrix) {
+            try {
+                // Загружаем макет FXML
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("record-vbox-main-view.fxml"));
+                Node customLayout = loader.load();
+
+                // Получаем контроллер загруженного макета
+                RecordVBoxMainController recordController = loader.getController();
+
+                // Передаем данные в контроллер кастомного макета
+                recordController.setPersonInfo(row[0], row[1], row[2], row[3], row[4], row[5]);
+
+                // Добавляем загруженный макет в VBoxDataPerson
+                VBoxDataPerson.getChildren().add(customLayout);
+            } catch (IOException e) {
+                System.out.println("ERROR: " + e);
+            }
+        }
     }
 
     @FXML
@@ -92,37 +123,31 @@ public class MainController {
     }
 
     @FXML
-    private void handleBtnEdit() {
-        if (!editName.getText().isEmpty() && !editPhone.getText().isEmpty() && !editAnimalName.getText().isEmpty()
-                && !editAnimaltype.getText().isEmpty() && !editDate.getValue().toString().isEmpty()){
-            try {
-//                loadScene("card-view.fxml");
-                // Добавляем нового пользователя в базу данных и получаем его id
-//                int personId = DB.addPerson(editName.getText(), editPhone.getText());
-//                int animalId = DB.addAnimal(personId, editAnimalName.getText(), editAnimaltype.getText());
-//                DB.addRegistry(animalId, editDate.getValue().toString());
+    private void handleBtnEdit() throws SQLException, IOException {
+        String name, phone, animalName, animalType, date;
+        name = editName.getText();
+        phone = editPhone.getText();
+        animalName = editAnimalName.getText();
+        animalType = editAnimaltype.getText();
+        date = editDate.getValue().toString();
+        if (!name.isEmpty() && !phone.isEmpty() && !animalName.isEmpty() && !animalType.isEmpty() && !date.isEmpty()){
+            int personId = DB.addPerson(name, phone);
+            if (personId == 0){
+                System.out.println("ERROR: not add person");
+            } else if (personId == -1){
+                System.out.println("занято");
+            } else {
+                int animalId = DB.addAnimal(personId, animalName, animalType);
+                int id_record = DB.addRegistry(animalId, date);
 
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("card-view.fxml"));
+                Parent root = loader.load();
+                CardController controller = loader.getController();
+                controller.setIdRecord(id_record);
 
-//                // Загружаем макет FXML
-//                FXMLLoader loader = new FXMLLoader(getClass().getResource("record-vbox-main-view.fxml   "));
-//                Node customLayout = loader.load();
-//
-//                // Получаем контроллер загруженного макета
-//                RecordVBoxMainController recordController = loader.getController();
-//
-//                // Передаем данные в контроллер кастомного макета
-//                recordController.setPersonInfo(
-//                        editName.getText(),
-//                        editPhone.getText(),
-//                        editAnimalName.getText(),
-//                        editAnimaltype.getText(),
-//                        editDate.getValue().toString()
-//                );
-//
-//                // Добавляем загруженный макет в VBoxDataPerson
-//                VBoxDataPerson.getChildren().add(customLayout);
-            } catch (Exception e) {
-                System.out.println("ERROR: "+e);
+                Stage stage = (Stage) editName.getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.show();
             }
         } else {
             notification.setText("Все поля должны быть заполнены!");

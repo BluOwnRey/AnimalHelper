@@ -20,12 +20,17 @@ public class RecordVBoxMainController {
     @FXML
     private Label dateLabel;
 
-    public void setPersonInfo(String name, String phone, String animalName, String animalType, String date) {
+    @FXML
+    private Label idLabel;
+
+
+    public void setPersonInfo(String name, String phone, String animalName, String animalType, String id, String date) {
         try {
             nameLabel.setText(name);
             phoneLabel.setText(phone);
             animalNameLabel.setText(animalName);
             animalTypeLabel.setText(animalType);
+            idLabel.setText(id);
             dateLabel.setText(date);
         } catch (Exception e) {
             System.out.println("ERROR: "+e);
