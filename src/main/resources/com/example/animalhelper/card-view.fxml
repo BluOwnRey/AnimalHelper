@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -14,218 +16,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #B0D8D0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demoproject.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #B0D8D0;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalhelper.CardController">
    <children>
-       <ScrollPane fitToWidth="true" layoutY="52.0" prefHeight="648.0" prefWidth="418.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="382.0" AnchorPane.topAnchor="52.0" xmlns:fx="http://javafx.com/fxml">
-         <content>
-            <AnchorPane prefHeight="1061.0" prefWidth="416.0">
-               <children>
-                  <AnchorPane layoutX="-1.0" prefHeight="180.0" prefWidth="400.0" style="-fx-background-radius: 50; -fx-background-color: #dcf6d0;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
-                     <children>
-                        <AnchorPane layoutX="198.0" layoutY="125.0" prefHeight="35.0" prefWidth="160.0">
-                           <children>
-                              <Label layoutX="-0.19999999999999996" layoutY="5.0" text="возраст" AnchorPane.leftAnchor="-0.19999999999999996">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="возраст" style="-fx-background-radius: 50;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="198.0" layoutY="90.0" prefHeight="35.0" prefWidth="160.0">
-                           <children>
-                              <Label layoutY="5.0" prefHeight="26.0" prefWidth="61.0" text="Дата Рожд" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <DatePicker layoutX="61.0" layoutY="5.0" prefHeight="26.0" prefWidth="96.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="198.0" layoutY="55.0" prefHeight="35.0" prefWidth="160.0">
-                           <children>
-                              <Label layoutY="5.0" prefHeight="26.0" prefWidth="55.0" text="кастрация" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox layoutX="60.0" layoutY="5.0" prefHeight="26.0" prefWidth="100.0" style="-fx-background-radius: 50;" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="198.0" layoutY="20.0" prefHeight="35.0" prefWidth="160.0" AnchorPane.rightAnchor="32.0">
-                           <children>
-                              <Label layoutY="5.0" text="вес" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="вес" style="-fx-background-radius: 50;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="31.0" layoutY="125.0" prefHeight="35.0" prefWidth="160.0">
-                           <children>
-                              <Label layoutX="-0.19999999999999996" layoutY="5.0" text="пол" AnchorPane.leftAnchor="-0.19999999999999996">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <ChoiceBox layoutX="60.0" layoutY="4.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-radius: 50;" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="31.0" layoutY="90.0" prefHeight="35.0" prefWidth="160.0">
-                           <children>
-                              <Label layoutX="-0.19999999999999996" layoutY="5.0" text="порода" AnchorPane.leftAnchor="-0.19999999999999996">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="порода" style="-fx-background-radius: 50;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="31.0" layoutY="55.0" prefHeight="35.0" prefWidth="160.0">
-                           <children>
-                              <Label layoutX="-0.19999999999999996" layoutY="5.0" text="вид" AnchorPane.leftAnchor="-0.19999999999999996">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <ComboBox layoutX="59.0" layoutY="5.0" prefHeight="26.0" prefWidth="100.0" promptText="Вид" style="-fx-background-radius: 50;" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="31.0" layoutY="20.0" prefHeight="35.0" prefWidth="160.0" AnchorPane.leftAnchor="31.0">
-                           <children>
-                              <Label layoutY="5.0" text="кличка" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="59.0" layoutY="3.0" prefHeight="26.0" prefWidth="100.0" promptText="Кличка" style="-fx-background-radius: 50;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutY="207.0" prefHeight="180.0" prefWidth="400.0" style="-fx-background-radius: 50; -fx-background-color: #dcf6d0;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="200.0">
-                     <children>
-                        <AnchorPane layoutX="29.0" layoutY="20.0" prefHeight="35.0" prefWidth="350.0" AnchorPane.leftAnchor="31.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="20.0">
-                           <children>
-                              <Label layoutY="5.0" prefHeight="21.0" prefWidth="55.0" text="Хозяин" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="71.0" layoutY="2.0" prefHeight="31.0" prefWidth="255.0" promptText="ФИО" style="-fx-background-radius: 50;" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="29.0" layoutY="55.0" prefHeight="35.0" prefWidth="331.0" AnchorPane.leftAnchor="31.0">
-                           <children>
-                              <Label layoutY="5.0" prefHeight="21.0" prefWidth="55.0" text="Адрес" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="71.0" layoutY="2.0" prefHeight="31.0" prefWidth="255.0" promptText="Обл, город, улица, дом" style="-fx-background-radius: 50;" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="29.0" layoutY="90.0" prefHeight="35.0" prefWidth="329.0" AnchorPane.leftAnchor="31.0">
-                           <children>
-                              <Label layoutY="5.0" prefHeight="25.0" prefWidth="70.0" text="Телефон" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="71.0" layoutY="2.0" prefHeight="31.0" prefWidth="255.0" promptText="+7 999-999-99-99" style="-fx-background-radius: 50;" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="29.0" layoutY="125.0" prefHeight="35.0" prefWidth="327.0" AnchorPane.leftAnchor="31.0">
-                           <children>
-                              <Label layoutY="5.0" prefHeight="25.0" prefWidth="70.0" text="Почта" AnchorPane.leftAnchor="0.0">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="71.0" layoutY="2.0" prefHeight="31.0" prefWidth="255.0" promptText="pochta@gmail.com" style="-fx-background-radius: 50;" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutY="390.0" prefHeight="587.0" prefWidth="390.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 50;" AnchorPane.bottomAnchor="470.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="390.0">
-                     <children>
-                        <Label layoutX="32.0" layoutY="28.0" text="Анкета" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="15.0">
-                           <font>
-                              <Font name="Georgia Bold" size="20.0" />
-                           </font>
-                        </Label>
-                        <AnchorPane layoutX="20.0" layoutY="47.0" prefHeight="122.0" prefWidth="200.0">
-                           <children>
-                              <Label layoutX="14.0" layoutY="1.0" text="Тип питания" AnchorPane.leftAnchor="14.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <RadioButton layoutX="2.0" layoutY="79.0" mnemonicParsing="false" text="Производственный" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="90.0" />
-                              <RadioButton layoutY="58.0" mnemonicParsing="false" text="Смешанный" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="62.0" />
-                              <RadioButton layoutX="4.0" layoutY="33.0" mnemonicParsing="false" text="Домашний" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="33.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="20.0" layoutY="169.0" prefHeight="217.0" prefWidth="360.0">
-                           <children>
-                              <Label layoutX="14.0" layoutY="14.0" text="Вакцинировано">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <CheckBox layoutX="8.0" layoutY="48.0" mnemonicParsing="false" text="Да" AnchorPane.leftAnchor="5.0" />
-                              <CheckBox layoutX="107.0" layoutY="48.0" mnemonicParsing="false" text="Нет" AnchorPane.leftAnchor="70.0" />
-                              <Label layoutX="13.0" layoutY="144.0" prefHeight="27.0" prefWidth="250.0" text="Дата последней вакцинации">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="14.0" layoutY="82.0" text="Название вакцины">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextField layoutX="3.0" layoutY="109.0" prefHeight="31.0" prefWidth="339.0" />
-                              <DatePicker layoutX="5.0" layoutY="171.0" prefHeight="31.0" prefWidth="184.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="17.0" layoutY="386.0" prefHeight="185.0" prefWidth="356.0">
-                           <children>
-                              <Label layoutX="14.0" layoutY="1.0" text="Хронические заболевания" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="1.0">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <TextArea layoutY="28.0" prefHeight="121.0" prefWidth="355.0" promptText="Перечислите заболевания" />
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-         </content>
-       </ScrollPane>
        <Button id="btnMenu" fx:id="btnMenu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 50; -fx-background-color: #F4F8D391;" text="☷" textAlignment="CENTER" textFill="#1a762e" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
            <font>
                <Font name="System Bold" size="14.0" />
            </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
        </Button>
        <Label layoutX="75.0" layoutY="16.0" prefHeight="24.0" prefWidth="178.0" text="Карта пациента" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="547.0" AnchorPane.topAnchor="16.0">
            <font>
@@ -242,6 +41,221 @@
             <Font name="Georgia Bold" size="24.0" />
          </font>
       </Label>
-      <ScrollPane fitToWidth="true" layoutX="400.0" layoutY="52.0" prefHeight="648.0" prefWidth="400.0" />
+      <ScrollPane layoutY="52.0" prefHeight="648.0" prefWidth="419.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1341.0" prefWidth="399.0">
+               <children>
+                  <VBox prefHeight="1342.0" prefWidth="400.0">
+                     <children>
+                        <AnchorPane prefHeight="180.0" prefWidth="180.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox layoutX="29.0" layoutY="20.0" prefHeight="438.0" prefWidth="310.0">
+                                 <children>
+                                    <AnchorPane prefHeight="50.0" prefWidth="383.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Кличка">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="109.0" layoutY="10.0" promptText="Кличка" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="310.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Вид">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox layoutX="109.0" layoutY="10.0" prefHeight="31.0" prefWidth="187.0" promptText="не выбран" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-radius: 50;">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Порода">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="109.0" layoutY="10.0" promptText="Порода" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Пол">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox layoutX="109.0" layoutY="10.0" prefHeight="31.0" prefWidth="187.0" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Вес">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="109.0" layoutY="10.0" promptText="Вес" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Возраст">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="109.0" layoutY="10.0" promptText="Возраст" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" text="Кастрация">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox layoutX="110.0" layoutY="10.0" prefHeight="31.0" prefWidth="187.0" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="92.0" text="Дата Рождения">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker layoutX="110.0" layoutY="10.0" prefHeight="31.0" prefWidth="187.0" promptText="06.07.2023" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox layoutX="32.0" layoutY="20.0" prefHeight="215.0" prefWidth="316.0">
+                                 <children>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="11.0" prefHeight="21.0" prefWidth="55.0" text="Хозяин" AnchorPane.leftAnchor="14.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="80.0" layoutY="8.0" prefHeight="31.0" prefWidth="222.0" promptText="ФИО" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="13.0" prefHeight="21.0" prefWidth="55.0" text="Адрес" AnchorPane.leftAnchor="14.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="80.0" layoutY="10.0" prefHeight="31.0" prefWidth="222.0" promptText="Обл, город, улица, дом" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="11.0" layoutY="12.0" prefHeight="25.0" prefWidth="70.0" text="Телефон" AnchorPane.leftAnchor="11.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="81.0" layoutY="9.0" prefHeight="31.0" prefWidth="222.0" promptText="+7 999-999-99-99" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="70.0" text="Почта" AnchorPane.leftAnchor="14.0">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="80.0" layoutY="10.0" prefHeight="31.0" prefWidth="222.0" promptText="pochta@gmail.com" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="517.0" prefWidth="380.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 50;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox layoutX="30.0" layoutY="63.0" prefHeight="520.0" prefWidth="317.0">
+                                 <children>
+                                    <AnchorPane prefHeight="124.0" prefWidth="317.0">
+                                       <children>
+                                          <Label layoutX="6.0" layoutY="1.0" text="Тип питания" AnchorPane.leftAnchor="6.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton layoutX="19.0" layoutY="35.0" mnemonicParsing="false" text="Домашний" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="35.0" />
+                                          <RadioButton layoutX="19.0" layoutY="64.0" mnemonicParsing="false" text="Смешанный" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="64.0" />
+                                          <RadioButton layoutX="19.0" layoutY="90.0" mnemonicParsing="false" text="Производственный" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="90.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="217.0" prefWidth="360.0">
+                                       <children>
+                                          <Label layoutX="4.0" layoutY="1.0" text="Вакцинировано">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <CheckBox layoutX="20.0" layoutY="38.0" mnemonicParsing="false" text="Да" AnchorPane.leftAnchor="20.0" />
+                                          <CheckBox layoutX="93.0" layoutY="38.0" mnemonicParsing="false" text="Нет" AnchorPane.leftAnchor="93.0" />
+                                          <Label layoutX="4.0" layoutY="135.0" prefHeight="27.0" prefWidth="250.0" text="Дата последней вакцинации">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="4.0" layoutY="70.0" text="Название вакцины">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField layoutX="20.0" layoutY="97.0" prefHeight="31.0" prefWidth="287.0" />
+                                          <DatePicker layoutX="20.0" layoutY="162.0" prefHeight="31.0" prefWidth="184.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="170.0" prefWidth="317.0">
+                                       <children>
+                                          <Label layoutX="6.0" layoutY="1.0" text="Хронические заболевания" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="1.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea layoutX="21.0" layoutY="28.0" prefHeight="121.0" prefWidth="288.0" promptText="Перечислите заболевания" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                              <Label layoutX="47.0" layoutY="25.0" text="Анкета" AnchorPane.leftAnchor="47.0" AnchorPane.topAnchor="25.0">
+                                 <font>
+                                    <Font name="Georgia Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="400.0" layoutY="52.0" prefHeight="648.0" prefWidth="400.0" />
    </children>
 </AnchorPane>

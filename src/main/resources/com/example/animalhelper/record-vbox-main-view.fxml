@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demoproject.RecordVBoxMainController">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="798.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 15;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="200.0">
+               <children>
+                  <Label id="nameLabel" fx:id="nameLabel" alignment="CENTER" text="Фио" textFill="#5b5b5b">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="phoneLabel" fx:id="phoneLabel" alignment="CENTER" text="Телефон" textFill="#5b5b5b">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <BorderPane prefHeight="2.0" prefWidth="770.0" style="-fx-background-color: #98e38d; -fx-background-radius: 50;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="27.0" />
+            <HBox layoutX="46.0" layoutY="-2.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0">
+               <children>
+                  <Label id="animalNameLabel" fx:id="animalNameLabel" alignment="CENTER" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Кличка" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="animalTypeLabel" fx:id="animalTypeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Вид" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="timeLabel" fx:id="timeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Время" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="300.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="dateLabel" fx:id="dateLabel" alignment="CENTER" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Дата" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

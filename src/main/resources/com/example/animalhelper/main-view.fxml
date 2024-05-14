@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #B0D8D0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalhelper.MainController">
+    <ScrollPane fitToWidth="true" layoutY="107.0" AnchorPane.bottomAnchor="-7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="107.0" xmlns:fx="http://javafx.com/fxml">
+        <VBox id="VBoxDataPerson" fx:id="VBoxDataPerson" prefHeight="164.0" prefWidth="799.0">
+            <ComboBox id="spinnerSort" fx:id="spinnerSort" prefWidth="150.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: #dcf6d0; -fx-border-color: #98e38d;">
+                <VBox.margin>
+                    <Insets left="600.0" top="5.0" />
+                </VBox.margin>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+           </ComboBox>
+        </VBox>
+    </ScrollPane>
+    <Button id="btnMenu" fx:id="btnMenu" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBtnMenu" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 50; -fx-background-color: #dcf6d0;" text="☷" textAlignment="CENTER" textFill="#1a762e" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+    </Button>
+    <Label layoutX="75.0" layoutY="16.0" prefHeight="18.0" prefWidth="738.0" text="Окно регистрации" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.39999999999998" AnchorPane.topAnchor="16.0">
+        <font>
+            <Font name="Georgia Bold" size="20.0" />
+        </font>
+    </Label>
+    <AnchorPane layoutX="-15.0" layoutY="50.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 20;" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <TextField id="editName" fx:id="editName" alignment="CENTER" layoutX="14.0" layoutY="7.0" prefWidth="160.0" promptText="ФИО" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: #98e38d;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="25.0" />
+        <TextField id="editPhone" fx:id="editPhone" alignment="CENTER" layoutX="174.0" layoutY="7.0" prefWidth="120.0" promptText="+7-999-999-99-99" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: #98e38d;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="195.0" />
+        <TextField id="editAnimalName" fx:id="editAnimalName" alignment="CENTER" layoutX="317.0" layoutY="20.0" prefWidth="140.0" promptText="Бобик" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: #98e38d;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="325.0" />
+        <TextField id="editAnimaltype" fx:id="editAnimaltype" alignment="CENTER" layoutX="490.0" layoutY="20.0" prefWidth="120.0" promptText="Собака" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-border-color: #98e38d;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="475.0" />
+        <Button id="btnEdit" fx:id="btnEdit" layoutX="737.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleBtnEdit" prefHeight="27.0" prefWidth="23.0" style="-fx-border-radius: 50; -fx-background-color: #FFFFFF; -fx-background-radius: 50; -fx-border-color: #98e38d;" text="✔" textFill="#82d18c" textOverrun="CLIP" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="737.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+        <DatePicker id="editDate" fx:id="editDate" layoutX="652.0" layoutY="20.0" prefWidth="120.0" style="-fx-border-color: #98e38d;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="605.0" />
+        <Label layoutX="22.0" layoutY="5.0" text="ФИО:" AnchorPane.leftAnchor="32.0" AnchorPane.topAnchor="4.0" />
+        <Label layoutX="179.0" layoutY="5.0" text="Телефон:" AnchorPane.leftAnchor="202.0" AnchorPane.topAnchor="4.0" />
+        <Label layoutX="305.0" layoutY="5.0" text="Кличка:" AnchorPane.leftAnchor="332.0" AnchorPane.topAnchor="4.0" />
+        <Label layoutX="426.0" layoutY="5.0" text="Вид:" AnchorPane.leftAnchor="482.0" AnchorPane.topAnchor="4.0" />
+        <Label layoutX="637.0" layoutY="9.0" text="Дата:" AnchorPane.leftAnchor="612.0" AnchorPane.topAnchor="4.0" />
+    </AnchorPane>
+   <Label id="notification" fx:id="notification" alignment="CENTER" prefHeight="27.0" prefWidth="800.0" textFill="RED" AnchorPane.topAnchor="500.0">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <AnchorPane id="menu_bac" fx:id="menu_bac" onMouseClicked="#handleBacMenu" opacity="0.56" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ebf5f4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <effect>
+         <BoxBlur iterations="0" />
+      </effect>
+   </AnchorPane>
+   <AnchorPane id="menu" fx:id="menu" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="150.0" style="-fx-background-color: #8fc9be; -fx-background-radius: 15;" AnchorPane.bottomAnchor="218.0" AnchorPane.leftAnchor="10.0">
+      <children>
+         <VBox layoutY="1.0" prefHeight="472.0" prefWidth="150.0">
+            <children>
+               <AnchorPane prefHeight="46.0" prefWidth="150.0">
+                  <children>
+                     <Button id="btnMenu" fx:id="btnMenu1" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 50; -fx-background-color: #F4F8D391;" text="☷" textAlignment="CENTER" textFill="#1a762e" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                        <font>
+                           <Font name="System Bold" size="14.0" />
+                        </font>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                     <Label layoutX="47.0" layoutY="11.0" text="Меню">
+                        <font>
+                           <Font name="Georgia" size="20.0" />
+                        </font>
+                     </Label>
+                  </children>
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin>
+               </AnchorPane>
+               <AnchorPane prefHeight="55.0" prefWidth="150.0">
+                  <children>
+                     <Button id="menu_btn_reg" fx:id="menu_btn_reg" defaultButton="true" layoutX="49.0" layoutY="15.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#handleBacRegMenuClick" onMouseEntered="#handleBacRegMenuEntered" onMouseExited="#handleBacRegMenuExited" style="-fx-background-color: #FFFFFF00; -fx-background-radius: 20;" text="Регистрация" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                        <font>
+                           <Font name="Georgia" size="18.0" />
+                        </font>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                  </children>
+               </AnchorPane>
+               <AnchorPane prefHeight="55.0" prefWidth="150.0">
+                  <children>
+                     <Button id="menu_btn_pat" fx:id="menu_btn_pat" defaultButton="true" layoutX="49.0" layoutY="15.0" mnemonicParsing="false" onMouseClicked="#handleBacPatMenuClick" onMouseEntered="#handleBacPatMenuEntered" onMouseExited="#handleBacPatMenuExited" style="-fx-background-color: #FFFFFF00; -fx-background-radius: 20;" text="Пациенты" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                        <font>
+                           <Font name="Georgia" size="18.0" />
+                        </font>
+                        <cursor>
+                           <Cursor fx:constant="HAND" />
+                        </cursor>
+                     </Button>
+                  </children>
+               </AnchorPane>
+               <AnchorPane prefHeight="55.0" prefWidth="150.0" />
+            </children>
+         </VBox>
+      </children>
+   </AnchorPane>
+</AnchorPane>
