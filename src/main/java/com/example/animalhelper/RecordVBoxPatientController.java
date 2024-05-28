@@ -1,25 +1,16 @@
 package com.example.animalhelper;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 import java.io.IOException;
-import java.time.LocalDate;
 
-public class RecordVBoxMainController {
-
-    @FXML
-    private Label nameLabel;
-
-    @FXML
-    private Label phoneLabel;
+public class RecordVBoxPatientController {
 
     @FXML
     private Label animalNameLabel;
@@ -31,10 +22,25 @@ public class RecordVBoxMainController {
     private Label dateLabel;
 
     @FXML
+    private Label diagnosis;
+
+    @FXML
     private Label idLabel;
 
+    @FXML
+    private Label nameLabel;
 
-    public void setPersonInfo(String name, String phone, String animalName, String animalType, String id, String date) {
+    @FXML
+    private AnchorPane panel;
+
+    @FXML
+    private Label phoneLabel;
+
+    @FXML
+    private Label status;
+
+
+    public void setPersonInfo(String name, String phone, String animalName, String animalType, String id, String date, String diagnosiss, String statuss) {
         try {
             nameLabel.setText(name);
             phoneLabel.setText(phone);
@@ -42,6 +48,8 @@ public class RecordVBoxMainController {
             animalTypeLabel.setText(animalType);
             idLabel.setText(id);
             dateLabel.setText(date);
+            diagnosis.setText(diagnosiss);
+            status.setText(statuss);
         } catch (Exception e) {
             System.out.println("ERROR: "+e);
         }

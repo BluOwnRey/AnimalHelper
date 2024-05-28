@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="96.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.animalhelper.RecordVBoxPatientController">
+   <children>
+      <AnchorPane layoutX="11.2" layoutY="9.0" prefHeight="85.0" prefWidth="777.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 15;" AnchorPane.leftAnchor="11.2" AnchorPane.rightAnchor="10.399999999999977" AnchorPane.topAnchor="9.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="200.0">
+               <children>
+                  <Label id="nameLabel" fx:id="nameLabel" alignment="CENTER" text="Фио" textFill="#5b5b5b">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="phoneLabel" fx:id="phoneLabel" alignment="CENTER" text="Телефон" textFill="#5b5b5b">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="idLabel" fx:id="idLabel" alignment="CENTER" opacity="0.0" text="id" textFill="#5b5b5b">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <BorderPane layoutX="4.8" layoutY="34.6" prefHeight="2.0" prefWidth="770.0" style="-fx-background-color: #98e38d; -fx-background-radius: 50;" AnchorPane.leftAnchor="4.8" AnchorPane.topAnchor="34.6" />
+            <HBox layoutX="10.4" layoutY="38.6" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="10.4" AnchorPane.rightAnchor="10.399999999999977" AnchorPane.topAnchor="38.6">
+               <children>
+                  <Label id="animalNameLabel" fx:id="animalNameLabel" alignment="CENTER" prefHeight="40.0" prefWidth="113.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Кличка" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="animalTypeLabel" fx:id="animalTypeLabel" alignment="CENTER" prefHeight="40.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Вид" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label id="animalTypeLabel" fx:id="diagnosis" alignment="CENTER" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Диагноз" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label id="dateLabel" fx:id="dateLabel" alignment="CENTER" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Дата" textFill="#5b5b5b">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="220.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <Label id="animalTypeLabel" fx:id="status" alignment="CENTER" layoutX="506.0" layoutY="6.0" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="Статус" textFill="#5b5b5b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel" layoutX="8.0" layoutY="12.0" onMouseClicked="#panelRecordClick" opacity="0.0" prefHeight="78.0" prefWidth="776.0" style="-fx-background-color: #dcf6d0; -fx-background-radius: 15;" />
+   </children>
+</AnchorPane>
