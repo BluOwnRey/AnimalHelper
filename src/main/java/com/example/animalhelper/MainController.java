@@ -74,7 +74,7 @@ public class MainController {
         menu.setVisible(false);
         menu_bac.setVisible(false);
 
-//        DB.clearTables();
+        DB.clearTables();
         DB.createTables();
 //        DB.dropDB();
 
@@ -212,7 +212,7 @@ public class MainController {
     }
 
     public void handleBacPatMenuClick() throws IOException {
-        // Переход на новое окно card-view.fxml
+        // Переход на новое окно patient-view.fxml
         FXMLLoader loader = new FXMLLoader(getClass().getResource("patient-view.fxml"));
         Parent root = loader.load();
 
